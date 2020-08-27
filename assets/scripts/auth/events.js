@@ -45,8 +45,19 @@ const onPassChange = function (event) {
     .catch(ui.onPassChangeFailure)
 }
 
+const onSignOut = function (event) {
+  event.preventDefault()
+  // send data in AJAX request to the API
+  api.signOut()
+    // handle successful response
+    .then(ui.onSignOutSuccess)
+    // handle failed response
+    .catch(ui.onSignOutFailure)
+}
+
 module.exports = {
   onSignUp: onSignUp,
   onSignIn: onSignIn,
-  onPassChange: onPassChange
+  onPassChange: onPassChange,
+  onSignOut: onSignOut
 }

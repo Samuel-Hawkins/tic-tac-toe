@@ -27,8 +27,17 @@ const passChange = function (data) {
     data: data
   })
 }
+
+const signOut = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/sign-out',
+    method: 'DELETE',
+    headers: { Authorization: 'Bearer ' + store.user.token }
+  })
+}
 module.exports = {
   signUp: signUp,
   signIn: signIn,
-  passChange: passChange
+  passChange: passChange,
+  signOut: signOut
 }
