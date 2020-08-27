@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Tic Tac Toe</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,87 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <header>
+        <div>
+          <h6 id='sign-up-button'>Sign Up</h6>
+        </div>
+        <div>
+          <h6 id='sign-in-button'>Sign In</h6>
+        </div>
+        <div>
+          <h6 id='change'>Change Password</h6>
+        </div>
+        <div id='sign-out'>
+          <h6>Sign Out</h6>
+        </div>
+        <div id='user-name'>
+          <h6></h6>
+        </div>
+      </header>
+
+      <p id='message'></p>
+
+      <form id="sign-up-form">
+        <fieldset>
+          <legend>Sign up!</legend>
+
+          <label for="email">Email</label>
+          <input id="email" name="credentials[email]" type="email" placeholder="Enter your Email">
+
+          <label for="password">Password</label>
+          <input id="password" name="credentials[password]" type="password" placeholder="Enter your Password">
+
+          <label for="password_confirmation">Password Confirmation</label>
+          <input id="password_confirmation" name="credentials[password_confirmation]" type="password" placeholder="Confirm your Password">
+
+          <input type="submit" value="Sign Up">
+        </fieldset>
+      </form>
+
+      <form id="sign-in-form">
+        <fieldset>
+          <legend>Sign in!</legend>
+
+          <label for="sign-in-email">Email</label>
+          <input id="sign-in-email" name="credentials[email]" type="email" placeholder="Enter your Email">
+
+          <label for="sign-in-password">Password</label>
+          <input id="sign-in-password" name="credentials[password]" type="password" placeholder="Enter your Password">
+
+          <input type="submit" value="Sign In">
+        </fieldset>
+      </form>
+
+      <form id="pass-change-form">
+        <fieldset>
+          <legend>Change Password!</legend>
+
+          <label for="oldPass">Old Password</label>
+          <input id="oldPass" name="passwords[old]" type="password" placeholder="Enter your old Password">
+
+          <label for="newPass">New Password</label>
+          <input id="newPass" name="passwords[new]" type="password" placeholder="Enter your new Password">
+
+          <input type="submit" value="Change Password">
+        </fieldset>
+      </form>
+      <section>
+        <h1 class='title'>Tic Tac Toe</h1>
+        <p id='game-message'></p>
+        <div id='gameboard'>
+          <div data-cell-index='0' class='box click'></div>
+          <div data-cell-index='1' class='box click'></div>
+          <div data-cell-index='2' class='box click'></div>
+          <div data-cell-index='3' class='box click'></div>
+          <div data-cell-index='4' class='box click'></div>
+          <div data-cell-index='5' class='box click'></div>
+          <div data-cell-index='6' class='box click'></div>
+          <div data-cell-index='7' class='box click'></div>
+          <div data-cell-index='8' class='box click'></div>
+        </div>
+      </section>
+
+
+
     </body>
 </html>
