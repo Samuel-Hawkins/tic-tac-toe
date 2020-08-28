@@ -4,10 +4,12 @@ const store = require('./../store')
 
 const onSignInButton = function () {
   $('#sign-in-form').show()
+  $('#sign-up-form').hide()
 }
 
 const onSignUpButton = function () {
   $('#sign-up-form').show()
+  $('#sign-in-form').hide()
 }
 
 const changePassForm = function () {
@@ -17,6 +19,7 @@ const changePassForm = function () {
 const onSignUpSuccess = function (response) {
   $('#message').text('Thanks for signing up ' + response.user.email)
   $('#sign-up-form').trigger('reset')
+  $('#sign-up-form').hide()
 }
 
 const onSignUpFailure = function () {
@@ -28,21 +31,24 @@ const onSignInSuccess = function (response) {
 
   $('#user-name').text('Welcome ' + response.user.email)
   $('#sign-in-form').trigger('reset')
-  $('#sign-up-form').hide()
   $('#sign-in-form').hide()
   $('#sign-out').show()
   $('#change').show()
   $('#sign-in-button').hide()
   $('#sign-up-button').hide()
+  $('#newGame').show()
+  $('#message').hide()
+  $('#game-message').html('')
 }
 
 const onSignInFailure = function () {
-  $('#sign-in-message').text('Sign in Failed, Try again')
+  $('#message').text('Sign in Failed, Try again')
 }
 
 const onPassChangeSuccess = function (response) {
-  $('#pass-change-message').text('Successful Password Reset')
+  $('#message').text('Successful Password Reset')
   $('#pass-change-form').trigger('reset')
+  $('#pass-change-form').hide()
 }
 
 const onPassChangeFailure = function () {
@@ -51,10 +57,11 @@ const onPassChangeFailure = function () {
 
 const onSignOutSuccess = function (response) {
   $('#message').text('Successfully Signed Out')
-  $('#pass-change-form').hide()
+  $('#change').hide()
   $('#sign-out').hide()
-  $('#sign-up-form').show()
-  $('#sign-in-form').show()
+  $('#sign-up-button').show()
+  $('#sign-in-button').show()
+  $('#user-name').html('')
 }
 
 const onSignOutFailure = function () {
