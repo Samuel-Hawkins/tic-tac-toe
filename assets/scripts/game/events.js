@@ -18,7 +18,7 @@ const gameWinningCombos = [
   [2, 4, 6]
 ]
 
-const onBoxClick = function () {
+const onBoxClick = function (event) {
   const targetBox = event.target
 
   if ((over === false) && ($(targetBox).text() !== 'X' && $(targetBox).text() !== 'O')) {
