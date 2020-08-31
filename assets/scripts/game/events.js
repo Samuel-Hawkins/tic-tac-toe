@@ -79,8 +79,14 @@ const newGame = function () {
     .then(ui.newGameMessage)
 }
 
+const getGames = function () {
+  api.getGames()
+    .then(ui.getGamesMessage)
+}
+
 module.exports = {
   onBoxClick: onBoxClick,
   gameDraw: gameDraw,
-  newGame: newGame
+  newGame: newGame,
+  getGames: getGames
 }

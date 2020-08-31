@@ -1,14 +1,19 @@
 @import '~bootstrap/scss/bootstrap';
 
+body {
+  background-image: rgba(0, 0, 0, .25);
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .05));
+}
 
-header {
+
+.header {
   border: solid 2px #000;
   display: flex;
   text-align: center;
   width: 100%;
 }
 
-h6 {
+h5 {
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -17,11 +22,11 @@ h6 {
   user-select: none;
 
   &:hover {
-    background-color: pink;
+    background-color: white;
   }
 }
 
-h7 {
+h6 {
   display: flex;
   justify-content: center;
   padding: 5px 10px 5px 10px;
@@ -32,6 +37,10 @@ h7 {
 
 section {
   text-align: center;
+}
+
+.buttons {
+  margin-top: 20px;
 }
 
 .container {

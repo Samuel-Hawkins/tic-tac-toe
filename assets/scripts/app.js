@@ -13,7 +13,7 @@ $('#change').hide()
 $('#sign-in-form').hide()
 $('#sign-up-form').hide()
 $('.container').hide()
-$('#newGame').hide()
+$('.buttons').hide()
 
 $(() => {
   $('#sign-up-form').on('submit', authEvents.onSignUp)
@@ -25,4 +25,5 @@ $(() => {
   $('#change').on('click', ui.changePassForm)
   $('.box').on('click', gameEvents.onBoxClick)
   $('#newGame').on('click', gameEvents.newGame)
+  $('#getGames').on('click', gameEvents.getGames)
 })

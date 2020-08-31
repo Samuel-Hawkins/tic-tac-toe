@@ -14,9 +14,13 @@ const newGameMessage = function (response) {
   $('#game-message').html('')
   $('.container').show()
 }
+const getGamesMessage = function (response) {
+  $('#game-message').html('You have played ' + response.games.length + ' games')
+}
 
 module.exports = {
   drawMessage: drawMessage,
   winMessage: winMessage,
-  newGameMessage: newGameMessage
+  newGameMessage: newGameMessage,
+  getGamesMessage: getGamesMessage
 }

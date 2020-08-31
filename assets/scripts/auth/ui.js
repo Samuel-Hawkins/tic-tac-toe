@@ -36,22 +36,25 @@ const onSignInSuccess = function (response) {
   $('#change').show()
   $('#sign-in-button').hide()
   $('#sign-up-button').hide()
-  $('#newGame').show()
+  $('.buttons').show()
   $('#message').hide()
   $('#game-message').html('')
 }
 
 const onSignInFailure = function () {
+  $('#message').show()
   $('#message').text('Sign in Failed, Try again')
 }
 
 const onPassChangeSuccess = function (response) {
+  $('#message').show()
   $('#message').text('Successful Password Reset')
   $('#pass-change-form').trigger('reset')
   $('#pass-change-form').hide()
 }
 
 const onPassChangeFailure = function () {
+  $('#message').show()
   $('#message').text('Password Reset Failed, Try again')
 }
 
@@ -62,9 +65,11 @@ const onSignOutSuccess = function (response) {
   $('#sign-up-button').show()
   $('#sign-in-button').show()
   $('#user-name').html('')
+  $('.buttons').hide()
 }
 
 const onSignOutFailure = function () {
+  $('#message').show()
   $('#message').text('Sign Out Failed, Try again')
 }
 
