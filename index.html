@@ -12,13 +12,13 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <header>
-          <h6 id='sign-up-button'>Sign Up</h6>
-          <h6 id='sign-in-button'>Sign In</h6>
-          <h6 id='change'>Change Password</h6>
-          <h6 id='sign-out'>Sign Out</h6>
-          <h7 id='user-name'></h7>
-      </header>
+      <div class='header'>
+          <h5 id='sign-up-button'>Sign Up</h5>
+          <h5 id='sign-in-button'>Sign In</h5>
+          <h5 id='change'>Change Password</h5>
+          <h5 id='sign-out'>Sign Out</h5>
+          <h6 id='user-name'></h6>
+      </div>
 
       <p id='message'></p>
 
@@ -82,7 +82,10 @@
             <div data-cell-index='8' class='col-4 box'></div>
           </div>
         </div>
-        <button id='newGame'>New Game</button>
+        <div class='buttons'>
+          <button id='newGame'>New Game</button>
+          <button id='getGames'>Games Played</button>
+        </div>
       </section>
     </body>
 </html>
