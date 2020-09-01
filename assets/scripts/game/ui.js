@@ -1,7 +1,7 @@
 const store = require('./../store')
 
 const drawMessage = function () {
-  $('#game-message').text('it is a draw')
+  $('#game-message').text('It is a draw')
 }
 
 const winMessage = function (player) {
