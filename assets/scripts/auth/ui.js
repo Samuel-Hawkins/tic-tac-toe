@@ -66,6 +66,9 @@ const onSignOutSuccess = function (response) {
   $('#sign-in-button').show()
   $('#user-name').html('')
   $('.buttons').hide()
+  $('#game-message').html('Please Sign In')
+  $('.container').hide()
+  $('#pass-change-form').hide()
 }
 
 const onSignOutFailure = function () {

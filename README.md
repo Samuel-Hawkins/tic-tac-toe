@@ -4,13 +4,12 @@ This application allows a user to play Tic Tac Toe in their browser.  I wanted t
 
 ## Important Links
 
-- [Other Repo](www.link.com)
-- [Deployed API](www.link.com)
+- [API] (https://git.generalassemb.ly/ga-wdi-boston/game-project-api)
 - [Deployed Client](https://samuel-hawkins.github.io/tic-tac-toe/)
 
 ## Planning Story
 
-
+For this project we were tasked with building the client side for a tic tac toe game. I knew that I wanted to keep my project as minimalistic as possible when the end user views it, so I mocked up a quick wireframe that was simple yet still accomplished the goals that I needed.  When it came to designing the board in HTML I opted to use bootstrap classes to arange my gameboard and Javascript to power the "brains" of the game. The API that the game accesses was provided for us and you can read about it in the link above.
 
 ### User Stories
 - As a user I would like to be able to sign in/up/change password/sign out.
@@ -22,7 +21,7 @@ This application allows a user to play Tic Tac Toe in their browser.  I wanted t
 ### Technologies Used
 
 - jQuery
-- HTML/CSS
+- HTML/CSS/SASS
 - Bootstrap
 - Javascript
 

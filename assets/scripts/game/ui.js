@@ -15,7 +15,7 @@ const newGameMessage = function (response) {
   $('.container').show()
 }
 const getGamesMessage = function (response) {
-  $('#game-message').html('You have played ' + response.games.length + ' games')
+  $('#game-message').html('You have played ' + response.games.length + ' game(s)')
 }
 
 module.exports = {
